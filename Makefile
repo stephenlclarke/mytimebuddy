@@ -21,7 +21,7 @@ TEST_PLUGIN ?= /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefaul
 
 .PHONY: ci build build-for-testing build-for-testing-if-simulator test test-if-simulator clean lint format sonar-scan print-toolchain typecheck xcodeproj
 
-ci: print-toolchain typecheck test-if-simulator
+ci: print-toolchain typecheck build-for-testing-if-simulator
 
 xcodeproj:
 	ruby Tools/generate-xcodeproj.rb

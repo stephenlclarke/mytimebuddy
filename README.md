@@ -27,7 +27,7 @@ Open `MyTimeBuddy.xcodeproj` in Xcode, or use the Makefile:
 make ci
 ```
 
-`make ci` typechecks the app and tests against the iOS Simulator SDK. If an iPhone simulator is available locally it also runs the test suite; GitHub Actions requires a simulator and fails if one is not available.
+`make ci` typechecks the app and tests against the iOS Simulator SDK. If an iPhone simulator is available locally it also builds the app and test bundle for that simulator; GitHub Actions requires a simulator and fails if one is not available.
 
 ## CI/CD
 
