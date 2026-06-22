@@ -34,7 +34,7 @@ make ci
 The workflows borrow the lightweight pieces that fit from `container-compose`:
 
 - `ci.yml` runs on `macos-26`, prints Swift/Xcode versions, fingerprints source files, caches DerivedData, runs the local `make ci` entrypoint with simulator build validation required, and runs SonarCloud when `SONAR_TOKEN` is available.
-- When `SONAR_TOKEN` is available, CI also runs `make coverage-if-simulator REQUIRE_SIMULATOR=1` to generate `coverage.xml` from Xcode coverage data for SonarCloud.
+- CI also runs `make coverage-if-simulator REQUIRE_SIMULATOR=1` to generate `coverage.xml` from Xcode coverage data; SonarCloud consumes that report when `SONAR_TOKEN` is available.
 - `quality.yml` keeps SwiftLint and SwiftFormat advisory, matching the non-blocking style posture used in `container-compose`.
 - `codeql.yml` runs manual-build CodeQL for Swift.
 
