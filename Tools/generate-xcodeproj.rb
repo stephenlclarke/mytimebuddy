@@ -22,7 +22,7 @@ test_group = project.main_group.new_group(TEST_NAME, TEST_NAME)
 
 def add_sources(target, group, relative_root)
   Dir.glob(File.join(ROOT, relative_root, "**", "*.swift")).sort.each do |path|
-    relative_path = path.delete_prefix("#{ROOT}/")
+    relative_path = path.delete_prefix("#{ROOT}/#{relative_root}/")
     file_ref = group.new_file(relative_path)
     target.add_file_references([file_ref])
   end
