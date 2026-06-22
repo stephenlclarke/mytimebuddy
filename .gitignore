@@ -5,6 +5,8 @@ DerivedData/
 *.xccovarchive
 *.profraw
 *.profdata
+__pycache__/
+coverage.xml
 .scannerwork/
 .DS_Store
 xcuserdata/

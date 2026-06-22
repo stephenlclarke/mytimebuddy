@@ -69,6 +69,11 @@ jobs:
         run: make ci REQUIRE_SIMULATOR=1
         working-directory: mytimebuddy
 
+      - name: Generate coverage for SonarQube
+        if: env.SONAR_TOKEN != ''
+        run: make coverage-if-simulator REQUIRE_SIMULATOR=1
+        working-directory: mytimebuddy
+
       - name: Cache SonarQube packages
         if: env.SONAR_TOKEN != ''
         uses: actions/cache@v5
