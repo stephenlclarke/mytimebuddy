@@ -1,0 +1,53 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Steve Clarke <stephenlclarke@mac.com> - https://xyzzy.tools
+
+name: Quality
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  swift-style-advisory:
+    name: SwiftLint/SwiftFormat Advisory
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - name: Checkout mytimebuddy
+        uses: actions/checkout@v6
+
+      - name: Install Swift style tools
+        run: |
+          set -euo pipefail
+          if ! command -v swiftlint >/dev/null 2>&1; then
+            brew install swiftlint
+          fi
+          if ! command -v swiftformat >/dev/null 2>&1; then
+            brew install swiftformat
+          fi
+          swiftlint version
+          swiftformat --version
+
+      - name: Run SwiftLint
+        continue-on-error: true
+        run: swiftlint lint --strict --quiet MyTimeBuddy MyTimeBuddyTests
+
+      - name: Run SwiftFormat lint
+        continue-on-error: true
+        run: swiftformat MyTimeBuddy MyTimeBuddyTests --lint --swift-version 6.0

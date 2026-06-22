@@ -1,0 +1,86 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Steve Clarke <stephenlclarke@mac.com> - https://xyzzy.tools
+
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      - develop
+    types:
+      - opened
+      - synchronize
+      - reopened
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: macos-26
+    env:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    steps:
+      - name: Checkout mytimebuddy
+        uses: actions/checkout@v6
+        with:
+          path: mytimebuddy
+          fetch-depth: 0
+
+      - name: Compute Xcode cache fingerprint
+        id: xcode-cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            swift --version 2>&1
+            xcodebuild -version
+            find mytimebuddy/MyTimeBuddy mytimebuddy/MyTimeBuddyTests mytimebuddy/MyTimeBuddy.xcodeproj \
+              -type f \
+              \( -name '*.swift' -o -name 'project.pbxproj' \) \
+              -print0 | sort -z | xargs -0 shasum -a 256
+            shasum -a 256 mytimebuddy/Makefile
+          } | shasum -a 256 | awk '{ printf "fingerprint=%s\n", $1 }' >> "$GITHUB_OUTPUT"
+
+      - name: Cache Xcode DerivedData
+        uses: actions/cache@v5
+        with:
+          path: mytimebuddy/build/DerivedData
+          key: ${{ runner.os }}-${{ runner.arch }}-macos26-xcode-v1-${{ steps.xcode-cache.outputs.fingerprint }}
+          restore-keys: |
+            ${{ runner.os }}-${{ runner.arch }}-macos26-xcode-v1-
+
+      - name: Print toolchain versions
+        run: make print-toolchain
+        working-directory: mytimebuddy
+
+      - name: Run local CI workflow
+        run: make ci REQUIRE_SIMULATOR=1
+        working-directory: mytimebuddy
+
+      - name: Cache SonarQube packages
+        if: env.SONAR_TOKEN != ''
+        uses: actions/cache@v5
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: SonarQube scan
+        if: env.SONAR_TOKEN != ''
+        uses: SonarSource/sonarqube-scan-action@v6
+        with:
+          projectBaseDir: mytimebuddy
+        env:
+          SONAR_TOKEN: ${{ env.SONAR_TOKEN }}

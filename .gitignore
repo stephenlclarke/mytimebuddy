@@ -1,0 +1,15 @@
+build/
+DerivedData/
+*.xcresult
+*.xccovreport
+*.xccovarchive
+*.profraw
+*.profdata
+.scannerwork/
+.DS_Store
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
