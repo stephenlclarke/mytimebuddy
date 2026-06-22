@@ -102,6 +102,7 @@ end
 
 test_target.build_configurations.each do |config|
   settings = config.build_settings
+  settings["BUNDLE_LOADER"] = "$(TEST_HOST)"
   settings["CODE_SIGN_STYLE"] = "Automatic"
   settings["GENERATE_INFOPLIST_FILE"] = "YES"
   settings["PRODUCT_BUNDLE_IDENTIFIER"] = "tools.xyzzy.mytimebuddy.tests"
