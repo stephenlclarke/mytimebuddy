@@ -46,7 +46,7 @@ jobs:
           build-mode: manual
 
       - name: Build app for CodeQL
-        run: make build-for-testing
+        run: make build-for-testing-if-simulator REQUIRE_SIMULATOR=1
 
       - name: Analyze
         uses: github/codeql-action/analyze@v4

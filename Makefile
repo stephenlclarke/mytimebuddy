@@ -89,7 +89,7 @@ test-if-simulator:
 		xcrun simctl list devices available >&2; \
 		exit 1; \
 	else \
-		printf 'No available iPhone simulator found; build-for-testing completed.\n'; \
+		printf 'No available iPhone simulator found; typecheck completed.\n'; \
 	fi
 
 typecheck:

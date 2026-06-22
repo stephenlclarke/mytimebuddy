@@ -24,7 +24,6 @@ My Time Buddy is a native SwiftUI iPhone app inspired by World Time Buddy's visu
 Open `MyTimeBuddy.xcodeproj` in Xcode, or use the Makefile:
 
 ```sh
-make build
 make ci
 ```
 
