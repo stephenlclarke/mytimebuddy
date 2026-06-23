@@ -4,7 +4,10 @@
 import Foundation
 
 struct MarketSession: Identifiable, Hashable {
-    var id: String { name }
+    var id: String {
+        name
+    }
+
     var name: String
     var timeZoneIdentifier: String
     var startHour: Int
@@ -19,7 +22,7 @@ struct MarketSession: Identifiable, Hashable {
         calendar.timeZone = timeZone
         var segments: [ClosedRange<Double>] = []
 
-        for dayOffset in -1...1 {
+        for dayOffset in -1 ... 1 {
             guard let day = calendar.date(byAdding: .day, value: dayOffset, to: boardStart) else {
                 continue
             }
@@ -33,13 +36,13 @@ struct MarketSession: Identifiable, Hashable {
                 continue
             }
 
-            let startOffset = start.timeIntervalSince(boardStart) / 3_600
-            let endOffset = end.timeIntervalSince(boardStart) / 3_600
+            let startOffset = start.timeIntervalSince(boardStart) / 3600
+            let endOffset = end.timeIntervalSince(boardStart) / 3600
             let clippedStart = max(0, startOffset)
             let clippedEnd = min(Double(hoursVisible), endOffset)
 
             if clippedEnd > clippedStart {
-                segments.append(clippedStart...clippedEnd)
+                segments.append(clippedStart ... clippedEnd)
             }
         }
 

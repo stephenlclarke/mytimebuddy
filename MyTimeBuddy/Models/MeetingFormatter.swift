@@ -10,7 +10,7 @@ enum MeetingFormatter {
         locations: [BuddyLocation],
         title: String = "My Time Buddy selection"
     ) -> String {
-        let end = start.addingTimeInterval(TimeInterval(durationHours * 3_600))
+        let end = start.addingTimeInterval(TimeInterval(durationHours * 3600))
         var lines = [title, "Duration: \(durationHours)h"]
 
         for location in locations {

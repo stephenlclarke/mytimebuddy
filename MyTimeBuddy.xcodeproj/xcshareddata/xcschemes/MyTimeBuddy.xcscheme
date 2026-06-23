@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE413AEDC7E0B00294BF39E3"
+               BlueprintIdentifier = "9CEC246285A928FCB7A428E9"
                BuildableName = "MyTimeBuddy.app"
                BlueprintName = "MyTimeBuddy"
                ReferencedContainer = "container:MyTimeBuddy.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "701EDE37C3A759018FB19E1B"
+               BlueprintIdentifier = "B47D8BC7311F711736208363"
                BuildableName = "MyTimeBuddyTests.xctest"
                BlueprintName = "MyTimeBuddyTests"
                ReferencedContainer = "container:MyTimeBuddy.xcodeproj">
@@ -44,7 +44,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE413AEDC7E0B00294BF39E3"
+            BlueprintIdentifier = "9CEC246285A928FCB7A428E9"
             BuildableName = "MyTimeBuddy.app"
             BlueprintName = "MyTimeBuddy"
             ReferencedContainer = "container:MyTimeBuddy.xcodeproj">
@@ -55,7 +55,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "701EDE37C3A759018FB19E1B"
+               BlueprintIdentifier = "B47D8BC7311F711736208363"
                BuildableName = "MyTimeBuddyTests.xctest"
                BlueprintName = "MyTimeBuddyTests"
                ReferencedContainer = "container:MyTimeBuddy.xcodeproj">
@@ -77,7 +77,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE413AEDC7E0B00294BF39E3"
+            BlueprintIdentifier = "9CEC246285A928FCB7A428E9"
             BuildableName = "MyTimeBuddy.app"
             BlueprintName = "MyTimeBuddy"
             ReferencedContainer = "container:MyTimeBuddy.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE413AEDC7E0B00294BF39E3"
+            BlueprintIdentifier = "9CEC246285A928FCB7A428E9"
             BuildableName = "MyTimeBuddy.app"
             BlueprintName = "MyTimeBuddy"
             ReferencedContainer = "container:MyTimeBuddy.xcodeproj">

@@ -1,13 +1,16 @@
 build/
 DerivedData/
+.build/
 *.xcresult
 *.xccovreport
 *.xccovarchive
 *.profraw
 *.profdata
 __pycache__/
+coverage.lcov
 coverage.xml
 .scannerwork/
+.vscode/
 .DS_Store
 xcuserdata/
 *.moved-aside

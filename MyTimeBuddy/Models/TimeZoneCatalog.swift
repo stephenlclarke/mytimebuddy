@@ -4,7 +4,10 @@
 import Foundation
 
 struct TimeZoneCandidate: Identifiable, Hashable {
-    var id: String { identifier }
+    var id: String {
+        identifier
+    }
+
     var identifier: String
     var city: String
     var region: String
@@ -17,8 +20,8 @@ struct TimeZoneCandidate: Identifiable, Hashable {
         let seconds = timeZone.secondsFromGMT(for: date)
         let sign = seconds >= 0 ? "+" : "-"
         let absolute = abs(seconds)
-        let hours = absolute / 3_600
-        let minutes = (absolute % 3_600) / 60
+        let hours = absolute / 3600
+        let minutes = (absolute % 3600) / 60
 
         if minutes == 0 {
             return "GMT\(sign)\(hours)"

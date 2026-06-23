@@ -8,7 +8,9 @@ enum HourFormat: String, CaseIterable, Codable, Identifiable {
     case twentyFour
     case mixed
 
-    var id: String { rawValue }
+    var id: String {
+        rawValue
+    }
 
     var title: String {
         switch self {

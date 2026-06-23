@@ -7,164 +7,149 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07A43EE78CEF88FEC6FDABBE /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD7D48F20E3275E9B414E7 /* AddLocationView.swift */; };
-		1651783233775197929BA729 /* BuddyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1152CFD06604A8A465D5E /* BuddyLocation.swift */; };
-		2DBAC622C9DB3475B42A9116 /* HourFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F547B32DF20A427268412105 /* HourFormat.swift */; };
-		344434645DC58D9876CF3655 /* MarketSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD31E64CBEF11ABDB5E71C2D /* MarketSession.swift */; };
-		57D3FAF5E59D7408CCF296E6 /* TimeBuddyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08344CC98D3D41C6A4F60F2 /* TimeBuddyStoreTests.swift */; };
-		5811E86D45EEACCDAA1CDD88 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C4E9A3E4A7839F49859F95 /* SettingsView.swift */; };
-		6FE8D308368EA4219F29437A /* TimeZoneCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D7B9D8284BA9954FC77C1 /* TimeZoneCatalog.swift */; };
-		942AAD77545C932BB88FC8A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB7E2A71BB992D7F971DE11 /* Foundation.framework */; };
-		AD2DBA923D2ADAC90A1990EB /* MyTimeBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7FE1C880BA9FA01A7AA80 /* MyTimeBuddyApp.swift */; };
-		B6C829CDA61B92C3045A819F /* ManageLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3BF65988597DFFC550974 /* ManageLocationsView.swift */; };
-		BFB2E7087C0CEE04DF405CE4 /* MeetingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2269AFADF47D5A63FAE6576D /* MeetingFormatter.swift */; };
-		CC3112E9AB6D7787C3B201C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB7E2A71BB992D7F971DE11 /* Foundation.framework */; };
-		D5C9CF5090D573181B1B02BD /* TimeBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7974CF24D3A3129B4F86C3 /* TimeBoardView.swift */; };
-		F23EF6C9A0BB2E5DDF1A8467 /* TimeBuddyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C6C7D05BD6CB83D50AFF75 /* TimeBuddyStore.swift */; };
-		FE7F3D95014E3D50D79CFCEF /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD04C9393DA0453496655491 /* AppView.swift */; };
+		01A9EE85C0F331F473F963AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B057ACF405643E1EB592C7D7 /* Foundation.framework */; };
+		0579535ABC75B896877BBD02 /* TimeBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC70149253EA13BAE90CE88 /* TimeBoardView.swift */; };
+		3688D8E50C37343B9B407AC1 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C679B3816EA187C3CFA9F15 /* AddLocationView.swift */; };
+		4281CDA89A687E8BAEEBD807 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD92C537CEBC246568CFABD0 /* AppView.swift */; };
+		4D379B500C86CD490E678FA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B057ACF405643E1EB592C7D7 /* Foundation.framework */; };
+		527267BA1E0DAFE66FB4779E /* ManageLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC364622977AD6F6D8E702 /* ManageLocationsView.swift */; };
+		746B11BE1727D92344B201A5 /* MarketSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032114C3822115F691E5E89A /* MarketSession.swift */; };
+		79EF50CE10577ABA267258AA /* MeetingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA39E4E73626C552AA4DE2 /* MeetingFormatter.swift */; };
+		89531933B0A2AFADA395EE9E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88D9A1884DCF775C9B2C06E /* SettingsView.swift */; };
+		9117B2C5A765183851B697CB /* TimeBuddyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F784647565D4DA8A5D291B /* TimeBuddyStore.swift */; };
+		92A768CF1BDD5D2D913E06D5 /* TimeZoneCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5E1390E63B86CFAD27411 /* TimeZoneCatalog.swift */; };
+		C1E3E1BD831841DC2E4AA836 /* HourFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31CCFF8BF82A72248740556 /* HourFormat.swift */; };
+		C3EC7AAEFA43332734067FE7 /* LocationHourRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0B79A6056DD749852BC4C2 /* LocationHourRow.swift */; };
+		CFFE96DEEC00517098A7EF46 /* TimeBuddyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73D7DB77808A68243A8F9D /* TimeBuddyStoreTests.swift */; };
+		D57830422622D6756876719F /* MyTimeBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD9FA3E96E8CF4506B55F0 /* MyTimeBuddyApp.swift */; };
+		FA8EA206AE35DAC581A7013A /* BuddyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB47F895F4667078AB24ABA /* BuddyLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6080BF213ABB2180C98CB664 /* PBXContainerItemProxy */ = {
+		FB38B4BA9DBABB0BC497C389 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B75F911FC677A2BE3B44EBC7 /* Project object */;
+			containerPortal = 225640967377BC84EB64980A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE413AEDC7E0B00294BF39E3;
+			remoteGlobalIDString = 9CEC246285A928FCB7A428E9;
 			remoteInfo = MyTimeBuddy;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		15B1152CFD06604A8A465D5E /* BuddyLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuddyLocation.swift; path = Models/BuddyLocation.swift; sourceTree = "<group>"; };
-		17C6C7D05BD6CB83D50AFF75 /* TimeBuddyStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeBuddyStore.swift; path = Models/TimeBuddyStore.swift; sourceTree = "<group>"; };
-		1C7974CF24D3A3129B4F86C3 /* TimeBoardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeBoardView.swift; path = Views/TimeBoardView.swift; sourceTree = "<group>"; };
-		2269AFADF47D5A63FAE6576D /* MeetingFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MeetingFormatter.swift; path = Models/MeetingFormatter.swift; sourceTree = "<group>"; };
-		2E9D7B9D8284BA9954FC77C1 /* TimeZoneCatalog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeZoneCatalog.swift; path = Models/TimeZoneCatalog.swift; sourceTree = "<group>"; };
-		34C4E9A3E4A7839F49859F95 /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
-		3BD3BF65988597DFFC550974 /* ManageLocationsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManageLocationsView.swift; path = Views/ManageLocationsView.swift; sourceTree = "<group>"; };
-		47D0DD45976127AF018A676A /* MyTimeBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTimeBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EB7E2A71BB992D7F971DE11 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		70FD7D48F20E3275E9B414E7 /* AddLocationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddLocationView.swift; path = Views/AddLocationView.swift; sourceTree = "<group>"; };
-		A08344CC98D3D41C6A4F60F2 /* TimeBuddyStoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeBuddyStoreTests.swift; sourceTree = "<group>"; };
-		CD31E64CBEF11ABDB5E71C2D /* MarketSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarketSession.swift; path = Models/MarketSession.swift; sourceTree = "<group>"; };
-		CDE7FE1C880BA9FA01A7AA80 /* MyTimeBuddyApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyTimeBuddyApp.swift; sourceTree = "<group>"; };
-		DD04C9393DA0453496655491 /* AppView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
-		DD3442EACDE1306614E38760 /* MyTimeBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTimeBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F547B32DF20A427268412105 /* HourFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HourFormat.swift; path = Models/HourFormat.swift; sourceTree = "<group>"; };
+		032114C3822115F691E5E89A /* MarketSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarketSession.swift; path = Models/MarketSession.swift; sourceTree = "<group>"; };
+		0C679B3816EA187C3CFA9F15 /* AddLocationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddLocationView.swift; path = Views/AddLocationView.swift; sourceTree = "<group>"; };
+		183CFC66FF9EB37050D11F1F /* MyTimeBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTimeBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FD9FA3E96E8CF4506B55F0 /* MyTimeBuddyApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyTimeBuddyApp.swift; sourceTree = "<group>"; };
+		3D0B79A6056DD749852BC4C2 /* LocationHourRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationHourRow.swift; path = Views/LocationHourRow.swift; sourceTree = "<group>"; };
+		3DC5485587BEEC5478523276 /* MyTimeBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTimeBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44F784647565D4DA8A5D291B /* TimeBuddyStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeBuddyStore.swift; path = Models/TimeBuddyStore.swift; sourceTree = "<group>"; };
+		4C73D7DB77808A68243A8F9D /* TimeBuddyStoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeBuddyStoreTests.swift; sourceTree = "<group>"; };
+		58EC364622977AD6F6D8E702 /* ManageLocationsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManageLocationsView.swift; path = Views/ManageLocationsView.swift; sourceTree = "<group>"; };
+		5FB47F895F4667078AB24ABA /* BuddyLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuddyLocation.swift; path = Models/BuddyLocation.swift; sourceTree = "<group>"; };
+		89EA39E4E73626C552AA4DE2 /* MeetingFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MeetingFormatter.swift; path = Models/MeetingFormatter.swift; sourceTree = "<group>"; };
+		9EC70149253EA13BAE90CE88 /* TimeBoardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeBoardView.swift; path = Views/TimeBoardView.swift; sourceTree = "<group>"; };
+		A2A5E1390E63B86CFAD27411 /* TimeZoneCatalog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeZoneCatalog.swift; path = Models/TimeZoneCatalog.swift; sourceTree = "<group>"; };
+		AD92C537CEBC246568CFABD0 /* AppView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		B057ACF405643E1EB592C7D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C31CCFF8BF82A72248740556 /* HourFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HourFormat.swift; path = Models/HourFormat.swift; sourceTree = "<group>"; };
+		C88D9A1884DCF775C9B2C06E /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		213273A2FBFDECD74845B442 /* Frameworks */ = {
+		60FF64B900CB5F5951B2FB46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC3112E9AB6D7787C3B201C8 /* Foundation.framework in Frameworks */,
+				01A9EE85C0F331F473F963AC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		279087B413268B4DB3E0A391 /* Frameworks */ = {
+		91BD5DADCCF0A60E8B7C8FEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				942AAD77545C932BB88FC8A7 /* Foundation.framework in Frameworks */,
+				4D379B500C86CD490E678FA8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24BB68D2252810B65E03518F = {
+		2956A0C1F086ADF4F4A3C767 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A437601669F68BBEC60E7005 /* Products */,
-				719451F19808D92870F826BA /* Frameworks */,
-				31A08734BF415F63BD965F4D /* MyTimeBuddy */,
-				92F31AA837D8DAC8939546AB /* MyTimeBuddyTests */,
+				A2ACB55B9498C14553362A05 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30FD95AD3FE500D915097B4A = {
+			isa = PBXGroup;
+			children = (
+				D80ACF42FA4DFE557F796FF6 /* Products */,
+				2956A0C1F086ADF4F4A3C767 /* Frameworks */,
+				55B565F138EF9DA03B10B964 /* MyTimeBuddy */,
+				CBEF960AF67517E2023177EE /* MyTimeBuddyTests */,
 			);
 			sourceTree = "<group>";
 		};
-		31A08734BF415F63BD965F4D /* MyTimeBuddy */ = {
+		55B565F138EF9DA03B10B964 /* MyTimeBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				DD04C9393DA0453496655491 /* AppView.swift */,
-				15B1152CFD06604A8A465D5E /* BuddyLocation.swift */,
-				F547B32DF20A427268412105 /* HourFormat.swift */,
-				CD31E64CBEF11ABDB5E71C2D /* MarketSession.swift */,
-				2269AFADF47D5A63FAE6576D /* MeetingFormatter.swift */,
-				17C6C7D05BD6CB83D50AFF75 /* TimeBuddyStore.swift */,
-				2E9D7B9D8284BA9954FC77C1 /* TimeZoneCatalog.swift */,
-				CDE7FE1C880BA9FA01A7AA80 /* MyTimeBuddyApp.swift */,
-				70FD7D48F20E3275E9B414E7 /* AddLocationView.swift */,
-				3BD3BF65988597DFFC550974 /* ManageLocationsView.swift */,
-				34C4E9A3E4A7839F49859F95 /* SettingsView.swift */,
-				1C7974CF24D3A3129B4F86C3 /* TimeBoardView.swift */,
+				AD92C537CEBC246568CFABD0 /* AppView.swift */,
+				5FB47F895F4667078AB24ABA /* BuddyLocation.swift */,
+				C31CCFF8BF82A72248740556 /* HourFormat.swift */,
+				032114C3822115F691E5E89A /* MarketSession.swift */,
+				89EA39E4E73626C552AA4DE2 /* MeetingFormatter.swift */,
+				44F784647565D4DA8A5D291B /* TimeBuddyStore.swift */,
+				A2A5E1390E63B86CFAD27411 /* TimeZoneCatalog.swift */,
+				27FD9FA3E96E8CF4506B55F0 /* MyTimeBuddyApp.swift */,
+				0C679B3816EA187C3CFA9F15 /* AddLocationView.swift */,
+				3D0B79A6056DD749852BC4C2 /* LocationHourRow.swift */,
+				58EC364622977AD6F6D8E702 /* ManageLocationsView.swift */,
+				C88D9A1884DCF775C9B2C06E /* SettingsView.swift */,
+				9EC70149253EA13BAE90CE88 /* TimeBoardView.swift */,
 			);
 			name = MyTimeBuddy;
 			path = MyTimeBuddy;
 			sourceTree = "<group>";
 		};
-		719451F19808D92870F826BA /* Frameworks */ = {
+		A2ACB55B9498C14553362A05 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B91DE94351298C50AF7B85EC /* iOS */,
+				B057ACF405643E1EB592C7D7 /* Foundation.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		92F31AA837D8DAC8939546AB /* MyTimeBuddyTests */ = {
+		CBEF960AF67517E2023177EE /* MyTimeBuddyTests */ = {
 			isa = PBXGroup;
 			children = (
-				A08344CC98D3D41C6A4F60F2 /* TimeBuddyStoreTests.swift */,
+				4C73D7DB77808A68243A8F9D /* TimeBuddyStoreTests.swift */,
 			);
 			name = MyTimeBuddyTests;
 			path = MyTimeBuddyTests;
 			sourceTree = "<group>";
 		};
-		A437601669F68BBEC60E7005 /* Products */ = {
+		D80ACF42FA4DFE557F796FF6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD3442EACDE1306614E38760 /* MyTimeBuddy.app */,
-				47D0DD45976127AF018A676A /* MyTimeBuddyTests.xctest */,
+				3DC5485587BEEC5478523276 /* MyTimeBuddy.app */,
+				183CFC66FF9EB37050D11F1F /* MyTimeBuddyTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B91DE94351298C50AF7B85EC /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5EB7E2A71BB992D7F971DE11 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		701EDE37C3A759018FB19E1B /* MyTimeBuddyTests */ = {
+		9CEC246285A928FCB7A428E9 /* MyTimeBuddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F924222BBCB23F7A6C219A6 /* Build configuration list for PBXNativeTarget "MyTimeBuddyTests" */;
+			buildConfigurationList = 03C5C54EFA7C56C5D0F3E6EA /* Build configuration list for PBXNativeTarget "MyTimeBuddy" */;
 			buildPhases = (
-				11D87BC38F20FE49BD2BD58B /* Sources */,
-				213273A2FBFDECD74845B442 /* Frameworks */,
-				9460B3BDB10EA473D8E64B49 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				016C102F28FDE010A6155352 /* PBXTargetDependency */,
-			);
-			name = MyTimeBuddyTests;
-			productName = MyTimeBuddyTests;
-			productReference = 47D0DD45976127AF018A676A /* MyTimeBuddyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CE413AEDC7E0B00294BF39E3 /* MyTimeBuddy */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 711A3E31DD22B43F381DE359 /* Build configuration list for PBXNativeTarget "MyTimeBuddy" */;
-			buildPhases = (
-				AA7C3776C368A278E935843A /* Sources */,
-				279087B413268B4DB3E0A391 /* Frameworks */,
-				9D40F600A631FAB3B225365B /* Resources */,
+				62357801BF689A4C3A847C77 /* Sources */,
+				91BD5DADCCF0A60E8B7C8FEF /* Frameworks */,
+				F86BC2BC5E47C9844F7AEE13 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -172,19 +157,37 @@
 			);
 			name = MyTimeBuddy;
 			productName = MyTimeBuddy;
-			productReference = DD3442EACDE1306614E38760 /* MyTimeBuddy.app */;
+			productReference = 3DC5485587BEEC5478523276 /* MyTimeBuddy.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B47D8BC7311F711736208363 /* MyTimeBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92C8AA1E349D2C744CDEF702 /* Build configuration list for PBXNativeTarget "MyTimeBuddyTests" */;
+			buildPhases = (
+				4EE7F82CBEB629491E4879D5 /* Sources */,
+				60FF64B900CB5F5951B2FB46 /* Frameworks */,
+				6526AC9075C590931700B8E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CEBCDF28B07B6352DD423EA /* PBXTargetDependency */,
+			);
+			name = MyTimeBuddyTests;
+			productName = MyTimeBuddyTests;
+			productReference = 183CFC66FF9EB37050D11F1F /* MyTimeBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B75F911FC677A2BE3B44EBC7 /* Project object */ = {
+		225640967377BC84EB64980A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 			};
-			buildConfigurationList = 878277B3C9E15E7D2021956D /* Build configuration list for PBXProject "MyTimeBuddy" */;
+			buildConfigurationList = 804A636DE80B9AC3107DCA71 /* Build configuration list for PBXProject "MyTimeBuddy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -192,28 +195,28 @@
 				en,
 				Base,
 			);
-			mainGroup = 24BB68D2252810B65E03518F;
+			mainGroup = 30FD95AD3FE500D915097B4A;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = A437601669F68BBEC60E7005 /* Products */;
+			productRefGroup = D80ACF42FA4DFE557F796FF6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE413AEDC7E0B00294BF39E3 /* MyTimeBuddy */,
-				701EDE37C3A759018FB19E1B /* MyTimeBuddyTests */,
+				9CEC246285A928FCB7A428E9 /* MyTimeBuddy */,
+				B47D8BC7311F711736208363 /* MyTimeBuddyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9460B3BDB10EA473D8E64B49 /* Resources */ = {
+		6526AC9075C590931700B8E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D40F600A631FAB3B225365B /* Resources */ = {
+		F86BC2BC5E47C9844F7AEE13 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,46 +226,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		11D87BC38F20FE49BD2BD58B /* Sources */ = {
+		4EE7F82CBEB629491E4879D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D3FAF5E59D7408CCF296E6 /* TimeBuddyStoreTests.swift in Sources */,
+				CFFE96DEEC00517098A7EF46 /* TimeBuddyStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA7C3776C368A278E935843A /* Sources */ = {
+		62357801BF689A4C3A847C77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE7F3D95014E3D50D79CFCEF /* AppView.swift in Sources */,
-				1651783233775197929BA729 /* BuddyLocation.swift in Sources */,
-				2DBAC622C9DB3475B42A9116 /* HourFormat.swift in Sources */,
-				344434645DC58D9876CF3655 /* MarketSession.swift in Sources */,
-				BFB2E7087C0CEE04DF405CE4 /* MeetingFormatter.swift in Sources */,
-				F23EF6C9A0BB2E5DDF1A8467 /* TimeBuddyStore.swift in Sources */,
-				6FE8D308368EA4219F29437A /* TimeZoneCatalog.swift in Sources */,
-				AD2DBA923D2ADAC90A1990EB /* MyTimeBuddyApp.swift in Sources */,
-				07A43EE78CEF88FEC6FDABBE /* AddLocationView.swift in Sources */,
-				B6C829CDA61B92C3045A819F /* ManageLocationsView.swift in Sources */,
-				5811E86D45EEACCDAA1CDD88 /* SettingsView.swift in Sources */,
-				D5C9CF5090D573181B1B02BD /* TimeBoardView.swift in Sources */,
+				4281CDA89A687E8BAEEBD807 /* AppView.swift in Sources */,
+				FA8EA206AE35DAC581A7013A /* BuddyLocation.swift in Sources */,
+				C1E3E1BD831841DC2E4AA836 /* HourFormat.swift in Sources */,
+				746B11BE1727D92344B201A5 /* MarketSession.swift in Sources */,
+				79EF50CE10577ABA267258AA /* MeetingFormatter.swift in Sources */,
+				9117B2C5A765183851B697CB /* TimeBuddyStore.swift in Sources */,
+				92A768CF1BDD5D2D913E06D5 /* TimeZoneCatalog.swift in Sources */,
+				D57830422622D6756876719F /* MyTimeBuddyApp.swift in Sources */,
+				3688D8E50C37343B9B407AC1 /* AddLocationView.swift in Sources */,
+				C3EC7AAEFA43332734067FE7 /* LocationHourRow.swift in Sources */,
+				527267BA1E0DAFE66FB4779E /* ManageLocationsView.swift in Sources */,
+				89531933B0A2AFADA395EE9E /* SettingsView.swift in Sources */,
+				0579535ABC75B896877BBD02 /* TimeBoardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		016C102F28FDE010A6155352 /* PBXTargetDependency */ = {
+		3CEBCDF28B07B6352DD423EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MyTimeBuddy;
-			target = CE413AEDC7E0B00294BF39E3 /* MyTimeBuddy */;
-			targetProxy = 6080BF213ABB2180C98CB664 /* PBXContainerItemProxy */;
+			target = 9CEC246285A928FCB7A428E9 /* MyTimeBuddy */;
+			targetProxy = FB38B4BA9DBABB0BC497C389 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2D3BB213C1FA1D930453FBDA /* Release */ = {
+		1A4A321FB011498AD29B3F3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -320,7 +324,7 @@
 			};
 			name = Release;
 		};
-		320A63D2806BD6E35A611873 /* Debug */ = {
+		1DC01CC3D46265CABB615A12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -381,7 +385,129 @@
 			};
 			name = Debug;
 		};
-		80137BAA330C3C5C008D3F28 /* Release */ = {
+		581330F65D6A344038CEA69C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		75FB85F2F54BE3AA4D49BB18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Time Buddy";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tools.xyzzy.mytimebuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A299ED14C4A4622DBB88A8C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "";
@@ -450,129 +576,7 @@
 			};
 			name = Release;
 		};
-		CD030484DF9EF4DE14191059 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		D66D7EF0EFED59C2E22E3560 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "My Time Buddy";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tools.xyzzy.mytimebuddy;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		FEC39022B7E5BC55A713F062 /* Debug */ = {
+		B0FBECB9D1A9080481EB01D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -632,34 +636,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F924222BBCB23F7A6C219A6 /* Build configuration list for PBXNativeTarget "MyTimeBuddyTests" */ = {
+		03C5C54EFA7C56C5D0F3E6EA /* Build configuration list for PBXNativeTarget "MyTimeBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D3BB213C1FA1D930453FBDA /* Release */,
-				FEC39022B7E5BC55A713F062 /* Debug */,
+				A299ED14C4A4622DBB88A8C3 /* Release */,
+				75FB85F2F54BE3AA4D49BB18 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		711A3E31DD22B43F381DE359 /* Build configuration list for PBXNativeTarget "MyTimeBuddy" */ = {
+		804A636DE80B9AC3107DCA71 /* Build configuration list for PBXProject "MyTimeBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				80137BAA330C3C5C008D3F28 /* Release */,
-				D66D7EF0EFED59C2E22E3560 /* Debug */,
+				1DC01CC3D46265CABB615A12 /* Debug */,
+				581330F65D6A344038CEA69C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		878277B3C9E15E7D2021956D /* Build configuration list for PBXProject "MyTimeBuddy" */ = {
+		92C8AA1E349D2C744CDEF702 /* Build configuration list for PBXNativeTarget "MyTimeBuddyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				320A63D2806BD6E35A611873 /* Debug */,
-				CD030484DF9EF4DE14191059 /* Release */,
+				1A4A321FB011498AD29B3F3E /* Release */,
+				B0FBECB9D1A9080481EB01D2 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B75F911FC677A2BE3B44EBC7 /* Project object */;
+	rootObject = 225640967377BC84EB64980A /* Project object */;
 }

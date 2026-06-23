@@ -22,7 +22,7 @@ struct SettingsView: View {
             }
 
             Section {
-                Stepper(value: selectedDurationBinding, in: 1...12) {
+                Stepper(value: selectedDurationBinding, in: 1 ... 12) {
                     Text("Default selection: \(store.selectedDuration)h")
                 }
             }

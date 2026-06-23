@@ -70,7 +70,7 @@ jobs:
         working-directory: mytimebuddy
 
       - name: Generate coverage for SonarQube
-        run: make coverage-if-simulator REQUIRE_SIMULATOR=1
+        run: make coverage-check
         working-directory: mytimebuddy
 
       - name: Cache SonarQube packages

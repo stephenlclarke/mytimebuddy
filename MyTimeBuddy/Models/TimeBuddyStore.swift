@@ -89,7 +89,7 @@ final class TimeBuddyStore {
     }
 
     func instant(forHourOffset hour: Int) -> Date {
-        boardStart.addingTimeInterval(TimeInterval(hour * 3_600))
+        boardStart.addingTimeInterval(TimeInterval(hour * 3600))
     }
 
     func select(hour: Int) {
@@ -123,12 +123,25 @@ final class TimeBuddyStore {
     }
 
     func removeLocations(at offsets: IndexSet) {
-        locations.remove(atOffsets: offsets)
+        for index in offsets.sorted(by: >) where locations.indices.contains(index) {
+            locations.remove(at: index)
+        }
+
         locations = TimeBuddyStore.ensureSingleHome(locations)
     }
 
     func moveLocations(from source: IndexSet, to destination: Int) {
-        locations.move(fromOffsets: source, toOffset: destination)
+        let indexes = source.sorted().filter { locations.indices.contains($0) }
+        let moving = indexes.map { locations[$0] }
+
+        for index in indexes.reversed() {
+            locations.remove(at: index)
+        }
+
+        let removedBeforeDestination = indexes.count(where: { $0 < destination })
+        let adjustedDestination = destination - removedBeforeDestination
+        let boundedDestination = min(max(adjustedDestination, 0), locations.count)
+        locations.insert(contentsOf: moving, at: boundedDestination)
     }
 
     func rename(_ location: BuddyLocation, to name: String) {

@@ -106,7 +106,7 @@ private struct DateStripView: View {
             }
 
             HStack(spacing: 8) {
-                ForEach(-2...4, id: \.self) { offset in
+                ForEach(-2 ... 4, id: \.self) { offset in
                     DayPill(offset: offset)
                 }
             }
@@ -169,14 +169,14 @@ private struct SelectionSummaryView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Selected Window")
                         .font(.headline)
-                    Text("\(store.selectedDuration)h from \(store.homeLocation.name) \(store.hourFormat.label(for: store.selectedStart, in: store.homeTimeZone).value)")
+                    Text(selectedWindowSummary)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
 
                 Spacer()
 
-                Stepper(value: durationBinding, in: 1...12) {
+                Stepper(value: durationBinding, in: 1 ... 12) {
                     EmptyView()
                 }
                 .labelsHidden()
@@ -225,11 +225,16 @@ private struct SelectionSummaryView: View {
         )
     }
 
+    private var selectedWindowSummary: String {
+        let hour = store.hourFormat.label(for: store.selectedStart, in: store.homeTimeZone).value
+        return "\(store.selectedDuration)h from \(store.homeLocation.name) \(hour)"
+    }
+
     private func selectionRange(for location: BuddyLocation) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEE d, h:mm a"
         formatter.timeZone = location.timeZone
-        let end = store.selectedStart.addingTimeInterval(TimeInterval(store.selectedDuration * 3_600))
+        let end = store.selectedStart.addingTimeInterval(TimeInterval(store.selectedDuration * 3600))
         return "\(formatter.string(from: store.selectedStart)) - \(formatter.string(from: end))"
     }
 }
@@ -246,7 +251,7 @@ private struct HourHeaderRow: View {
                 .foregroundStyle(.secondary)
                 .frame(width: labelWidth, alignment: .leading)
 
-            ForEach(0..<24, id: \.self) { hour in
+            ForEach(0 ..< 24, id: \.self) { hour in
                 let instant = store.instant(forHourOffset: hour)
                 let label = store.hourFormat.label(for: instant, in: store.homeTimeZone)
 
@@ -290,7 +295,7 @@ private struct MarketSessionsView: View {
 
     private func sessionBand(_ session: MarketSession, range: ClosedRange<Double>) -> some View {
         let width = CGFloat(range.upperBound - range.lowerBound) * tileWidth
-        let x = CGFloat(range.lowerBound) * tileWidth
+        let xOffset = CGFloat(range.lowerBound) * tileWidth
         let palette = color(for: session.name)
 
         return Text(session.name)
@@ -302,7 +307,7 @@ private struct MarketSessionsView: View {
             .frame(width: max(width, 44), height: 18)
             .background(palette)
             .clipShape(Capsule())
-            .offset(x: x, y: verticalOffset(for: session.name))
+            .offset(x: xOffset, y: verticalOffset(for: session.name))
     }
 
     private func color(for name: String) -> Color {
@@ -329,92 +334,6 @@ private struct MarketSessionsView: View {
         default:
             23
         }
-    }
-}
-
-private struct LocationHourRow: View {
-    let location: BuddyLocation
-    let store: TimeBuddyStore
-    let labelWidth: CGFloat
-    let tileWidth: CGFloat
-    let tileHeight: CGFloat
-
-    var body: some View {
-        HStack(spacing: 0) {
-            VStack(alignment: .leading, spacing: 3) {
-                HStack(spacing: 5) {
-                    if location.isHome {
-                        Image(systemName: "house.fill")
-                            .font(.caption2)
-                            .foregroundStyle(.green)
-                    }
-
-                    Text(location.name)
-                        .font(.subheadline.weight(.semibold))
-                        .lineLimit(1)
-                }
-
-                Text(location.abbreviation)
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
-            }
-            .frame(width: labelWidth, alignment: .leading)
-
-            ForEach(0..<24, id: \.self) { hour in
-                let instant = store.instant(forHourOffset: hour)
-                let label = store.hourFormat.label(for: instant, in: location.timeZone)
-
-                Button {
-                    store.select(hour: hour)
-                } label: {
-                    VStack(spacing: 1) {
-                        Text(label.value)
-                            .font(.subheadline.weight(.semibold).monospacedDigit())
-                        if !label.suffix.isEmpty {
-                            Text(label.suffix)
-                                .font(.caption2)
-                        }
-                        Text(store.localDateLabel(for: instant, in: location.timeZone))
-                            .font(.caption2)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.65)
-                    }
-                    .frame(width: tileWidth, height: tileHeight)
-                    .background(tileColor(for: instant))
-                    .overlay(selectionOverlay(for: hour))
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("\(location.name), \(label.value) \(label.suffix)")
-            }
-        }
-    }
-
-    private func tileColor(for instant: Date) -> Color {
-        if store.showsWeekends && store.isWeekend(instant, in: location.timeZone) {
-            return Color.pink.opacity(0.14)
-        }
-
-        var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = location.timeZone
-        let hour = calendar.component(.hour, from: instant)
-
-        switch hour {
-        case 9..<18:
-            return Color.yellow.opacity(0.2)
-        case 7..<9, 18..<21:
-            return Color.cyan.opacity(0.16)
-        default:
-            return Color.indigo.opacity(0.18)
-        }
-    }
-
-    private func selectionOverlay(for hour: Int) -> some View {
-        let selectedRange = store.selectedHour..<(store.selectedHour + store.selectedDuration)
-        let isSelected = selectedRange.contains(hour)
-
-        return RoundedRectangle(cornerRadius: 6, style: .continuous)
-            .stroke(isSelected ? Color.accentColor : Color(.separator), lineWidth: isSelected ? 2 : 0.5)
-            .padding(1)
     }
 }
 

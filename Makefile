@@ -12,15 +12,20 @@ BUILD_DESTINATION ?= generic/platform=iOS Simulator
 TEST_DESTINATION ?=
 DERIVED_DATA ?= build/DerivedData
 RESULT_BUNDLE ?= build/MyTimeBuddy.xcresult
+COVERAGE_LCOV ?= coverage.lcov
+COVERAGE_MIN ?= 85
 COVERAGE_XML ?= coverage.xml
 TYPECHECK_DIR ?= build/Typecheck
 REQUIRE_SIMULATOR ?= 0
+PYTHON ?= python3
+SWIFT ?= swift
+SWIFT_LLVM_COV ?= $(shell xcrun --find llvm-cov 2>/dev/null)
 SWIFTFORMAT ?= swiftformat
 SWIFTLINT ?= swiftlint
 TEST_FRAMEWORK ?= /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks
 TEST_PLUGIN ?= /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing/libTestingMacros.dylib
 
-.PHONY: ci build build-for-testing build-for-testing-if-simulator test test-if-simulator coverage coverage-if-simulator clean lint format sonar-scan print-toolchain typecheck xcodeproj
+.PHONY: ci build build-for-testing build-for-testing-if-simulator test test-if-simulator coverage coverage-check clean lint format sonar-scan print-toolchain typecheck xcodeproj
 
 ci: print-toolchain typecheck build-for-testing-if-simulator
 
@@ -81,23 +86,28 @@ test:
 		test
 
 coverage:
-	@if [[ -z "$(TEST_DESTINATION)" ]]; then \
-		printf 'TEST_DESTINATION is required for make coverage, for example platform=iOS Simulator,name=iPhone 16\n' >&2; \
+	@if [[ -z "$(SWIFT_LLVM_COV)" ]]; then \
+		printf 'llvm-cov is required; install the active Swift toolchain or set SWIFT_LLVM_COV=/path/to/llvm-cov\n' >&2; \
 		exit 2; \
 	fi
-	rm -rf "$(RESULT_BUNDLE)" "$(COVERAGE_XML)"
-	xcodebuild \
-		-project "$(PROJECT)" \
-		-scheme "$(SCHEME)" \
-		-configuration "$(CONFIGURATION)" \
-		-destination "$(TEST_DESTINATION)" \
-		-derivedDataPath "$(DERIVED_DATA)" \
-		-resultBundlePath "$(RESULT_BUNDLE)" \
-		-enableCodeCoverage YES \
-		-parallel-testing-enabled NO \
-		CODE_SIGNING_ALLOWED=NO \
-		test
-	python3 Tools/coverage/xccov-to-sonarqube-generic.py "$(RESULT_BUNDLE)" "$(COVERAGE_XML)" "$$(pwd)"
+	rm -rf .build "$(COVERAGE_LCOV)" "$(COVERAGE_XML)"
+	$(SWIFT) test --enable-code-coverage
+	test_binary="$$(find .build -path '*.xctest/Contents/MacOS/*' -type f | head -n 1)"; \
+	profile="$$(find .build -path '*/codecov/default.profdata' -type f | head -n 1)"; \
+	if [[ -z "$$test_binary" || -z "$$profile" ]]; then \
+		printf 'SwiftPM coverage artifacts were not found.\n' >&2; \
+		exit 2; \
+	fi; \
+	"$(SWIFT_LLVM_COV)" export \
+		-format=lcov \
+		-instr-profile="$$profile" \
+		"$$test_binary" \
+		--sources MyTimeBuddy/Models \
+		> "$(COVERAGE_LCOV)"
+	$(PYTHON) Tools/coverage/lcov-to-sonarqube-generic.py "$(COVERAGE_LCOV)" "$(COVERAGE_XML)" "$$(pwd)"
+
+coverage-check: coverage
+	$(PYTHON) Tools/coverage/check-coverage.py "$(COVERAGE_XML)" "$(COVERAGE_MIN)"
 
 test-if-simulator:
 	@simulator_name="$$(xcrun simctl list devices available | awk -F '[()]' '/iPhone/ { gsub(/^[[:space:]]+|[[:space:]]+$$/, "", $$1); print $$1; exit }')"; \
@@ -110,19 +120,6 @@ test-if-simulator:
 		exit 1; \
 	else \
 		printf 'No available iPhone simulator found; typecheck completed.\n'; \
-	fi
-
-coverage-if-simulator:
-	@simulator_name="$$(xcrun simctl list devices available | awk -F '[()]' '/iPhone/ { gsub(/^[[:space:]]+|[[:space:]]+$$/, "", $$1); print $$1; exit }')"; \
-	if [[ -n "$$simulator_name" ]]; then \
-		printf 'Using simulator: %s\n' "$$simulator_name"; \
-		$(MAKE) coverage TEST_DESTINATION="platform=iOS Simulator,name=$$simulator_name"; \
-	elif [[ "$(REQUIRE_SIMULATOR)" == "1" ]]; then \
-		printf 'No available iPhone simulator found.\n' >&2; \
-		xcrun simctl list devices available >&2; \
-		exit 1; \
-	else \
-		printf 'No available iPhone simulator found; coverage not generated.\n'; \
 	fi
 
 typecheck:
@@ -173,7 +170,7 @@ sonar-scan:
 	@if [[ -z "$${SONAR_TOKEN:-}" ]]; then \
 		printf 'SONAR_TOKEN is not set; skipping SonarQube scan.\n'; \
 	elif [[ ! -f "$(COVERAGE_XML)" ]]; then \
-		printf '$(COVERAGE_XML) is missing; run make coverage or make coverage-if-simulator before make sonar-scan\n' >&2; \
+		printf '$(COVERAGE_XML) is missing; run make coverage before make sonar-scan\n' >&2; \
 		exit 2; \
 	elif command -v sonar-scanner >/dev/null 2>&1; then \
 		sonar-scanner; \
@@ -183,4 +180,4 @@ sonar-scan:
 	fi
 
 clean:
-	rm -rf build "$(COVERAGE_XML)"
+	rm -rf .build build "$(COVERAGE_LCOV)" "$(COVERAGE_XML)"
